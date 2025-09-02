@@ -36,7 +36,7 @@ jobs:
             cd /var/www/
             git clone https://github.com/f-oni/woody-app.git
 
-            cd /var/www/woody-app/server-one/
+            cd /var/www/woody-app/
             export PATH=$PATH:/home/ubuntu/.nvm/versions/node/v22.19.0/bin/npm
             export PATH=$PATH:/home/ubuntu/.nvm/versions/node/v22.19.0/bin/pm2
 
