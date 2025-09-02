@@ -37,6 +37,7 @@ jobs:
             git clone https://github.com/f-oni/woody-app.git
 
             cd /var/www/woody-app/
+            sudo apt update
             npm install
             npm install express
             pm2 restart index.js || pm2 start index.js
