@@ -31,13 +31,16 @@ jobs:
           key: ${{ secrets.EC2_PRIVATE_KEY }}
           script: |
             sudo mkdir -p /var/www/
+            sudo chown -R $USER /var/www
+            sudo chmod -R +rwx /var/www
             cd /var/www/
-            git clone https://github.com/f-oni/woody-app
+            git clone https://github.com/f-oni/woody-app.git
             
             git pull origin main
 
             npm init -y
 
             npm install
+            npm install -g pm2
             pm2 restart index.js || pm2 start index.js
   
