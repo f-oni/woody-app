@@ -36,11 +36,9 @@ jobs:
             cd /var/www/
             git clone https://github.com/f-oni/woody-app.git
 
-            cd /var/www/woody-app
-
+            cd /var/www/woody-app/
             npm init -y
 
-            npm install
-            npm install -g pm2
+            npm install express
             pm2 restart index.js || pm2 start index.js
   
