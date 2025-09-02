@@ -32,16 +32,11 @@ jobs:
           script: |
             sudo mkdir -p /var/www/
             cd /var/www/
+            git clone https://github.com/f-oni/woody-app
             
-            if [ -d "woody-app" ]; then
-              cd /var/www/woody-app
-              git pull origin main
-            elsle
-              git clone https://github.com/f-oni/woody-app.git
-            fi
-
-            cd /var/www/woody-app
             git pull origin main
+
+            npm init -y
 
             npm install
             pm2 restart index.js || pm2 start index.js
