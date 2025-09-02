@@ -37,11 +37,7 @@ jobs:
             git clone https://github.com/f-oni/woody-app.git
 
             cd /var/www/woody-app/
-            export PATH=$PATH:/home/ubuntu/.nvm/versions/node/v22.19.0/bin/npm
-            export PATH=$PATH:/home/ubuntu/.nvm/versions/node/v22.19.0/bin/pm2
-
-            npm init -y
-
+            npm install
             npm install express
             pm2 restart index.js || pm2 start index.js
   
