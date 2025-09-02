@@ -35,8 +35,8 @@ jobs:
             sudo chmod -R +rwx /var/www
             cd /var/www/
             git clone https://github.com/f-oni/woody-app.git
-            
-            git pull origin main
+
+            cd /var/www/woody-app
 
             npm init -y
 
